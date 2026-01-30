@@ -73,12 +73,4 @@ Common stop signals:
 tmux capture-pane -t mysession:server -p
 ```
 
-This is how you check if your command worked.
-
-```bash
-# Get last 10 lines
-tmux capture-pane -t mysession:server -p | tail -n 10
-
-# Check if text appears in output
-tmux capture-pane -t mysession:server -p | grep "Server running"
-```
+If you don't see the output you want yet, sleep and run again. If you don't know how long it will take, start at 15 seconds, doubling the sleep duration each time, but never sleep more than 4 minutes (240 seconds).
