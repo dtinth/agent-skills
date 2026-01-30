@@ -1,5 +1,5 @@
 ---
-name: playwright
+name: playwright-testing
 description: Playwright testing. Use this skill to write and run automated tests for web applications using Playwright.
 ---
 
