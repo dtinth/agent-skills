@@ -15,8 +15,11 @@ The above command:
 
 ## Other Skills
 
-I use these third-party skills:
+I use these third-party skills…
+
+### [Playwright CLI](https://github.com/microsoft/playwright-cli)
 
 ```
+npm install -g @playwright/cli@latest --force
 npx skills add microsoft/playwright-cli
 ```
