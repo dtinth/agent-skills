@@ -3,12 +3,21 @@ name: discord
 description: Use this skill to send a message over Discord to the operator
 ---
 
-The webhook URL is in `~/.config/discord-agent/webhook-url.txt`
+To send a message over Discord to the user, there is a script at `~/.local/bin/discord-curl` that can be invoked to send a Discord message via a webhook.
+
+The script is essentially implemented this way:
+
+```sh
+#!/bin/bash -e
+curl -X POST "$@" <webhook_url>
+```
+
+Here are some examples:
 
 ```sh
 # Send a message
-curl -X POST -F 'content=hello' $(cat ~/.config/discord-agent/webhook-url.txt)
+~/.local/bin/discord-curl -F 'content=hello'
 
 # Send a message with file
-curl -X POST -F 'content=hello' -F 'files[0]=@/etc/os-release' $(cat ~/.config/discord-agent/webhook-url.txt)
+~/.local/bin/discord-curl -F 'content=hello' -F 'files[0]=@/etc/os-release'
 ```
