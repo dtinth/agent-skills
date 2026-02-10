@@ -202,6 +202,9 @@ export class AppTester {
 }
 ```
 
+- Name page objects as well as the root tester class with the `Tester` prefix. It helps us distinguish between production code and test code (when the test lives in the same repository as the production code).
+- Use getters to lazily-instantiate page objects, so that we do not create page objects that we do not use. Each page object is simple enough and are stateless, so they do not need to be memoized.
+
 Create a page object for each page in your app. For example, a LoginPageTester:
 
 ```javascript
