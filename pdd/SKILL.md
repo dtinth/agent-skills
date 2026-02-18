@@ -19,6 +19,7 @@ A good increment:
 //  - Bullet point of expected behaviour
 //  - Reference to related patterns (e.g., "See <file> for ...")
 //  - Dependency notes (e.g., "Needs <something> from #1235")
+//  - Acceptance criteria
 doSomething() {
   throw new Error("doSomething not yet implemented")
 }
@@ -32,13 +33,14 @@ Key rules:
 
 ## When to Wrap Up With a Stub
 
-If you're spending too long on a sub-task:
+If you think you're spending too long on a task:
 
 1. Get tests to pass with a minimal implementation
 2. Write a `@todo` comment that explains:
    - The context on what you are working on
    - What you tried and why it didn't work so far
    - What the next agent needs to know to continue the work without repeating your failed attempts
+3. Create a task in your task list referring to the todo comment you created.
 
 ## Picking Up an Existing Puzzle
 
@@ -47,5 +49,5 @@ When you find a `@todo` to implement:
 1. Read the comment fully — it should have context, bullets, and file references
 2. Check the ticket numbers in issue tracker for acceptance criteria
 3. Study the referenced files/patterns before writing code
-4. Remove both the `@todo` comment when the implementation is complete
+4. Remove the `@todo` comment when the implementation is complete
 5. Run the relevant tests to confirm nothing breaks
