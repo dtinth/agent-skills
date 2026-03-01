@@ -59,7 +59,7 @@ No secrets needed.
 
 ## Configuration (`jsr.json` or `deno.json`)
 
-**Minimal:**
+**Minimal:** (preferred for new packages as it is the most simple)
 ```json
 {
   "name": "@scope/pkg",
